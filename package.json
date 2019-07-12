@@ -1,0 +1,15 @@
+{
+  "name": "electron-tls-renegotiation",
+  "author": "Udit Vasu",
+  "scripts": {
+    "v3": "./node_modules/electron3/cli.js ./electron.js",
+    "v4": "./node_modules/electron4/cli.js ./electron.js",
+    "server": "node server.js",
+    "test-v3": "node server.js & SERVER_PID=$! && npm run v3 && kill $SERVER_PID",
+    "test-v4": "node server.js & SERVER_PID=$! && npm run v4 && kill $SERVER_PID"
+  },
+  "dependencies": {
+    "electron3": "npm:electron@3",
+    "electron4": "npm:electron@4"
+  }
+}
